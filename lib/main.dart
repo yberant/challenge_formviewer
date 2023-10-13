@@ -9,15 +9,6 @@ void main() {
     child: MyApp(),
     providers: [ChangeNotifierProvider(create: (_) => UserDataProvider())],
   ));
-  /*
-  runApp(MultiProvider(
-    child: MyApp(),
-    providers: [
-      ChangeNotifierProvider(
-          create: (_) => CoinProvider(coinRepository: coinRepository))
-    ],
-  ));
-   */
 }
 
 class MyApp extends StatelessWidget {

@@ -31,8 +31,6 @@ class _DataFormState extends State<DataForm> {
   String notEmptyMsg = "El campo es obligatorio";
   final trimRegExp = RegExp(r"^[^\s]+(\s+[^\s]+)*$");
   String trimMsg = "Hay espacios al inicio o al final del campo";
-  //final nineDigitRegExp = RegExp(r"^\\d{9}$");
-  //String nineDigitMsg = "Ingre";
 
   @override
   void initState() {
@@ -126,7 +124,6 @@ class _DataFormState extends State<DataForm> {
             ),
             ElevatedButton(
               onPressed: () {
-                //userDataProvider.userData?.printUserData();
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!
                       .save(); //guardará todos los valores en el objeto de usuario

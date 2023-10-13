@@ -20,7 +20,6 @@ class FormFieldWidget extends StatelessWidget {
       this.validator,
       this.hintText,
       this.fieldType = FieldType.normal,
-      //this.onChange,
       required this.onSave});
 
   @override
@@ -31,7 +30,6 @@ class FormFieldWidget extends StatelessWidget {
     return Container(
         width: screenWidth * 0.9,
         margin: EdgeInsets.only(bottom: screenHeight * 0.017),
-        //alignment: Alignment.topLeft,
         child: fieldType == FieldType.phone
             ? TextFormField(
                 validator: validator,
@@ -64,7 +62,6 @@ class FormFieldWidget extends StatelessWidget {
             : TextFormField(
                 validator: validator,
                 onSaved: onSave,
-                //onSaved: (val) => print("$labelText: $val!"),
                 keyboardType: fieldType == FieldType.rut
                     ? TextInputType.number
                     : TextInputType.text,
@@ -78,8 +75,6 @@ class FormFieldWidget extends StatelessWidget {
                     borderSide: BorderSide(),
                   ),
                   prefixIcon: icon,
-
-                  //contentPadding: EdgeInsets.only(bottom: 20),
                   errorStyle: TextStyle(height: 0),
                 )));
   }
