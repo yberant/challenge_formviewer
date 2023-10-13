@@ -1,16 +1,10 @@
-# formviewer
+# cryptoviewer
 
-A new Flutter project.
+Este proyecto es parte de una prueba técnica para optar al puesto de desarrollador movil para la empresa finmarkets. Se trata de una aplicación hecha en flutter que demuestra un formulario simple.
 
-## Getting Started
+ Para compilar y ejecutar la aplicación en modo de desarrollo se debe ejecutar desde el directorio raíz los siguientes comandos:
 
-This project is a starting point for a Flutter application.
+ * Para instalar las dependencias que la app usa: flutter pub get
+ * Para compilar y correr la aplicación: flutter run app
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Obviamente es requisito tener flutter ya preinstalado y configurado
