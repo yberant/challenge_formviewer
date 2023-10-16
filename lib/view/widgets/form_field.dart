@@ -32,9 +32,9 @@ class FormFieldWidget extends StatelessWidget {
         margin: EdgeInsets.only(bottom: screenHeight * 0.017),
         child: fieldType == FieldType.phone
             ? TextFormField(
-                validator: validator,
+                validator: (val) => validator!(val!.trim()),
                 keyboardType: TextInputType.number,
-                onSaved: onSave,
+                onSaved: (val) => onSave(val!.trim()),
                 decoration: InputDecoration(
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     border: const OutlineInputBorder(
@@ -60,8 +60,8 @@ class FormFieldWidget extends StatelessWidget {
                     )),
               )
             : TextFormField(
-                validator: validator,
-                onSaved: onSave,
+                validator: (val) => validator!(val!.trim()),
+                onSaved: (val) => onSave(val!.trim()),
                 keyboardType: fieldType == FieldType.rut
                     ? TextInputType.number
                     : TextInputType.text,

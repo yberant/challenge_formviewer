@@ -29,8 +29,8 @@ class _DataFormState extends State<DataForm> {
       "Ingrese nombre válido y apellido válido, separados \npor un espacio";
   final notEmptyRegExp = RegExp(r"(.|\s)*\S(.|\s)*");
   String notEmptyMsg = "El campo es obligatorio";
-  final trimRegExp = RegExp(r"^[^\s]+(\s+[^\s]+)*$");
-  String trimMsg = "Hay espacios al inicio o al final del campo";
+  //final trimRegExp = RegExp(r"^[^\s]+(\s+[^\s]+)*$");
+  //String trimMsg = "Hay espacios al inicio o al final del campo";
 
   @override
   void initState() {
@@ -60,7 +60,7 @@ class _DataFormState extends State<DataForm> {
                   .required()
                   .regExp(notEmptyRegExp, notEmptyMsg)
                   .regExp(fullNameRegExp, fullNameMsg)
-                  .regExp(trimRegExp, trimMsg)
+                  //.regExp(trimRegExp, trimMsg)
                   .build(),
               onSave: (field) => userDataProvider.setFullName(field),
             ),
@@ -87,7 +87,7 @@ class _DataFormState extends State<DataForm> {
                 validator: ValidationBuilder(locale: locale)
                     .required()
                     .regExp(notEmptyRegExp, notEmptyMsg)
-                    .regExp(trimRegExp, trimMsg)
+                    //.regExp(trimRegExp, trimMsg)
                     .email()
                     .build(),
                 onSave: (field) => userDataProvider.setEmail(field)),
